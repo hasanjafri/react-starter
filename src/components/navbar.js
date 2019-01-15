@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import history from './history';
+
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -29,10 +31,10 @@ function NavBar(props) {
             <AppBar position="static" color="default" className={classes.appBar}>
                 <Toolbar>
                     <Typography variant="headline" color="inherit" noWrap className={classes.toolbarTitle}>
-                        React-Starter
+                        Paytm Starter
                     </Typography>
-                    <Button>Home</Button>
-                    <Button>Other Page</Button>
+                    <Button onClick={() => history.push('/')}>Home</Button>
+                    <Button onClick={() => history.push('/receipts')}>Receipts</Button>
                     <Button>Another Page</Button>
                 </Toolbar>
             </AppBar>
